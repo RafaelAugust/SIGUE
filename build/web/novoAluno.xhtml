@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <ui:decorate template="principal.xhtml" >
+        <ui:define name="centro">
+           <center>
+                    <h:form>
+                            <h:panelGrid id="painel01" columns="3">
+                                <p:outputLabel value="Nome :"/>
+                                <p:inputText id="nome" value=""
+                                             required="true" requiredMessage="Campo Obrigatorio"/>
+                                <p:message for="nome"/>
+
+                                <p:outputLabel value="Sobrenome :"/>
+                                <p:inputText id="sobrenome" value=""
+                                               required="true" requiredMessage="Campo Obrigatorio"/>
+                                <p:message for="sobrenome"/>
+
+                                <p:outputLabel value="Cidade :"/>
+                                <p:inputText id="cidade" value=""
+                                             required="true" requiredMessage="Campo Obrigatorio"/>
+                                <p:message for="cidade"/>
+
+                                <p:outputLabel value="Cep :"/>
+                                <p:inputMask id="cep" value=""
+                                             mask="99999-999"  required="true" requiredMessage="Campo Obrigatorio"/>
+                                <p:message for="cep"/>
+                                
+                                <p:outputLabel value="UF :"/>
+                                <p:selectOneMenu id="uf" value="">
+                                    <f:selectItem itemLabel="Masculino" itemValue="M"/>
+                                    <f:selectItem itemLabel="Feminino" itemValue="F"/>
+                                </p:selectOneMenu>           
+                                <p:message for="uf"/>
+                                 
+                                <p:outputLabel value="E-mail :"/>
+                                <p:inputText id="email" value=""
+                                              required="true" requiredMessage="Campo Obrigatorio"/>
+                                <p:message for="email"/>
+
+
+                                <p:outputLabel value="Telefone :"/>
+                                <p:inputMask id="tele" value=""
+                                            mask="(99)9999-9999" required="true" requiredMessage="Campo Obrigatorio"/>
+                                <p:message for="tele"/>
+
+                                <p:outputLabel value="celular :"/>
+                                <p:inputMask id="celular" value=""
+                                             mask="(99)9999-9999" required="true" requiredMessage="Campo Obrigatorio"/>
+                                <p:message for="celular"/>
+
+                            </h:panelGrid>
+                        <p:separator style="width: 100%; height: 1px"/> 
+                        <p:commandButton value="SALVAR" update="painel01" />
+                        <p:commandButton value="LIMPAR" type="reset" />
+                    </h:form>
+                </center>
+           
+        </ui:define>
+    </ui:decorate> 
+</html>
+
