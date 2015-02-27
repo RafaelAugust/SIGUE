@@ -1,13 +1,59 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html">
-    <h:head>
-        <title>SIGUE Login</title>
-    </h:head>
-    <h:body>
-        
-    </h:body>
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    
+    <f:view contentType="text/html">
+        <h:head>
+            <ui:insert name="titulo">
+                <f:facet name="first">
+                    <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+                    <link rel="StyleSheet" href="css/sigue.css" type="text/css" />s
+                    <title>SIGUE</title>
+                </f:facet>
+                
+            </ui:insert>
+        </h:head>
+
+        <h:body styleClass="corpodapagina">
+            <f:view>
+            <p:layout fullPage="true">
+                <p:layoutUnit styleClass="layout-border" position="east" size="300" >
+                    <h:form>
+                        <p:menu>
+                            <p:submenu label="Menu">
+                                <p:menuitem value="Cadastrar Aluno" action="novoAluno" />
+                                <p:menuitem value="Historico Escolar" action="historico" />
+                                <p:menuitem value="Alunos Cadastrados" action="ListarAlunos" />
+                                <p:menuitem value="Perfil" action="index" />
+                                <p:menuitem value="Sair" action="LoginPage" />
+                            </p:submenu>
+                        </p:menu>
+                    </h:form>
+                </p:layoutUnit>
+                
+                <p:layoutUnit styleClass="Stilo_Centros" position="center">
+                    <ui:insert name="centro">
+                        <div id="header">
+                               Head
+                        </div>
+                        
+                        <div id="Centro">
+                               Centro da pagina
+                        </div>
+                        
+                        <div id="rodape">
+                                rodape
+                        </div>
+                    </ui:insert>
+                </p:layoutUnit>
+            </p:layout>
+           </f:view>
+        </h:body>
+    </f:view>
 </html>
 
 

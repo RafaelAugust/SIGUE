@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+         <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+         <link rel="StyleSheet" href="css/sigue.css" type="text/css" />s
+         <title>SIGUE</title>
+    </h:head>
+    
+    <h:body styleClass="login-page">
+        <f:view>
+            <p:layout fullPage="true">
+                <p:layoutUnit styleClass="layout-border" position="north" size="80"  >
+                    <h:form id="logon">
+                        
+                        <h:panelGrid id="painelLogar" columns="5" cellpadding="2">
+                            <p:outputLabel value="Login" />
+                            <p:inputText id="login" 
+                                         required="true" requiredMessage="Campo Login"/>
+                            
+                            <p:outputLabel value="Senha :" />
+                            <p:password id="pass" 
+                                         required="true" requiredMessage="Campo Senha"/>
+                           
+                            <p:commandButton value="enviar" update="painelLogar" action="index.xhtml"/>
+                        </h:panelGrid>
+                    
+                    </h:form>
+                </p:layoutUnit>
+                
+                <p:layoutUnit styleClass="layout-border" position="center">
+                    <p:fieldset legend="Cadastrar Ususario" toggleable="true">
+                            <h:form>
+                                <h:panelGrid id="cadast" columns="2" cellspacing="5">
+                                        <p:outputLabel value="Nome Completo:*"/>
+                                        <p:inputText id="nome" value="" 
+                                                     required="true" requiredMessage="Campo Obrigatorio"/>
+                                      
+                                        <p:outputLabel value="Login :*"/>
+                                        <p:inputText id="log" value="" 
+                                                     required="true" requiredMessage="Campo Obrigatorio"/>
+                                       
+                                        <p:outputLabel value="Password :*"/>
+                                        <p:password id="senh" value="" 
+                                                     required="true" requiredMessage="Campo Obrigatorio"/>
+                                     
+                                        <p:outputLabel value="C. Password :*"/>
+                                        <p:password id="consenh" value="" 
+                                                     required="true" requiredMessage="Campo Obrigatorio"/>
+                                       
+                                </h:panelGrid>
+                                        <center>
+                                                <p:commandButton value="enviar" update="cadast" />
+                                                <p:commandButton value="limpar" type="reset" />
+                                        </center>
+                            </h:form>
+                    </p:fieldset>
+                </p:layoutUnit>
+                
+                <p:layoutUnit styleClass="layout-border" position="south" size="60">
+                    south
+                </p:layoutUnit>
+            </p:layout>
+        </f:view>
+    </h:body>
+
+</html>
+

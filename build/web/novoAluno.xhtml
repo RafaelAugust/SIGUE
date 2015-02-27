@@ -5,61 +5,97 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:p="http://primefaces.org/ui"
       xmlns:f="http://java.sun.com/jsf/core">
-    <ui:decorate template="principal.xhtml" >
+    <ui:decorate template="index.xhtml" >
         <ui:define name="centro">
-           <center>
-                    <h:form>
-                            <h:panelGrid id="painel01" columns="3">
-                                <p:outputLabel value="Nome :"/>
-                                <p:inputText id="nome" value=""
-                                             required="true" requiredMessage="Campo Obrigatorio"/>
-                                <p:message for="nome"/>
+            <p:fieldset legend="Novo Aluno" toggleable="true">
+                <center>
+                         <h:form>
+                             <p:separator style="width: 100%; height: 1px" /> 
+                             <p:outputLabel value="Cadastro Do Usuario"/>
+                             <p:separator style="width: 100%; height: 1px" /> 
 
-                                <p:outputLabel value="Sobrenome :"/>
-                                <p:inputText id="sobrenome" value=""
-                                               required="true" requiredMessage="Campo Obrigatorio"/>
-                                <p:message for="sobrenome"/>
+                             <h:panelGrid id="painel01" columns="3" cellspacing="5">
 
-                                <p:outputLabel value="Cidade :"/>
-                                <p:inputText id="cidade" value=""
-                                             required="true" requiredMessage="Campo Obrigatorio"/>
-                                <p:message for="cidade"/>
+                                     <p:outputLabel value="Nome :"/>
+                                     <p:inputText id="nome" value="" 
+                                                  required="true" requiredMessage="Campo Obrigatorio"/>
+                                     <p:message for="nome"/>
 
-                                <p:outputLabel value="Cep :"/>
-                                <p:inputMask id="cep" value=""
-                                             mask="99999-999"  required="true" requiredMessage="Campo Obrigatorio"/>
-                                <p:message for="cep"/>
-                                
-                                <p:outputLabel value="UF :"/>
-                                <p:selectOneMenu id="uf" value="">
-                                    <f:selectItem itemLabel="Masculino" itemValue="M"/>
-                                    <f:selectItem itemLabel="Feminino" itemValue="F"/>
-                                </p:selectOneMenu>           
-                                <p:message for="uf"/>
-                                 
-                                <p:outputLabel value="E-mail :"/>
-                                <p:inputText id="email" value=""
-                                              required="true" requiredMessage="Campo Obrigatorio"/>
-                                <p:message for="email"/>
+                                     <p:outputLabel value="Sobrenome :"/>
+                                     <p:inputText id="sobrenome" value=""
+                                                    required="true" requiredMessage="Campo Obrigatorio"/>
+                                     <p:message for="sobrenome"/>
+
+                                     <p:outputLabel value="Sexo :"/>
+                                     <p:selectOneMenu id="sex" value="">
+                                         <f:selectItem itemLabel="Masculino" itemValue="M"/>
+                                         <f:selectItem itemLabel="Feminino" itemValue="F"/>
+                                     </p:selectOneMenu>           
+                                     <p:message for="sex"/>
+
+                                     <p:outputLabel value="E-mail :"/>
+                                     <p:inputText id="email" value=""
+                                                   required="true" requiredMessage="Campo Obrigatorio"/>
+                                     <p:message for="email"/>
 
 
-                                <p:outputLabel value="Telefone :"/>
-                                <p:inputMask id="tele" value=""
-                                            mask="(99)9999-9999" required="true" requiredMessage="Campo Obrigatorio"/>
-                                <p:message for="tele"/>
+                                     <p:outputLabel value="Telefone :"/>
+                                     <p:inputMask id="tele" value=""
+                                                 mask="(99)9999-9999" required="true" requiredMessage="Campo Obrigatorio"/>
+                                     <p:message for="tele"/>
 
-                                <p:outputLabel value="celular :"/>
-                                <p:inputMask id="celular" value=""
-                                             mask="(99)9999-9999" required="true" requiredMessage="Campo Obrigatorio"/>
-                                <p:message for="celular"/>
+                                     <p:outputLabel value="celular :"/>
+                                     <p:inputMask id="celular" value=""
+                                                  mask="(99)9999-9999" required="true" requiredMessage="Campo Obrigatorio"/>
+                                     <p:message for="celular"/>
 
-                            </h:panelGrid>
-                        <p:separator style="width: 100%; height: 1px"/> 
-                        <p:commandButton value="SALVAR" update="painel01" />
-                        <p:commandButton value="LIMPAR" type="reset" />
-                    </h:form>
-                </center>
-           
+                                     <p:separator style="width: 100%; height: 0.5px" /> 
+                                     <p:outputLabel value=" Endereço "/>
+                                     <p:separator style="width: 100%; height: 0.5px" /> 
+
+                                     <p:outputLabel value="Cidade :"/>
+                                     <p:inputText id="cidade" value=""
+                                                  required="true" requiredMessage="Campo Obrigatorio"/>
+                                     <p:message for="cidade"/>
+
+                                     <p:outputLabel value="Bairro :"/>
+                                     <p:inputText id="bairro" value=""
+                                                  required="true" requiredMessage="Campo Obrigatorio"/>
+                                     <p:message for="bairro"/>
+
+                                     <p:outputLabel value="Rua :"/>
+                                     <p:inputText id="rua" value=""
+                                                  required="true" requiredMessage="Campo Obrigatorio"/>
+                                     <p:message for="rua"/>
+
+                                     <p:outputLabel value="Nº :"/>
+                                     <p:inputText id="num" value="" />
+                                     <p:message for="num"/>
+
+                                     <p:outputLabel value="Cep :"/>
+                                     <p:inputMask id="cep" value=""
+                                                  mask="99999-999"  required="true" requiredMessage="Campo Obrigatorio"/>
+                                     <p:message for="cep"/>
+
+                                     <p:outputLabel value="UF :"/>
+                                     <p:selectOneMenu id="uf" value="">
+                                         <f:selectItem itemLabel="MG" />
+                                         <f:selectItem itemLabel="BA" />
+                                         <f:selectItem itemLabel="RJ" />
+                                         <f:selectItem itemLabel="SP" />
+                                         <f:selectItem itemLabel="PR" />
+                                         <f:selectItem itemValue="RN" />
+                                     </p:selectOneMenu>
+                                     <p:message for="uf" />
+
+                                 </h:panelGrid>    
+                             <p:separator style="width: 100%; height: 1px"/> 
+                             <p:commandButton value="ENVIAR" update="painel01" />
+                             <p:commandButton value="LIMPAR" type="reset" />
+
+                         </h:form>
+                     </center>
+                </p:fieldset>
         </ui:define>
     </ui:decorate> 
 </html>
