@@ -1,0 +1,102 @@
+create database projetoSIGUE;
+
+
+create table aluno (matr serial primary key not null,
+			nome varchar(70),
+			senha varchar(15),
+			idade integer,
+			ender varchar(100),
+			cidade varchar(20),
+			nomPai varchar(70),
+			nomMae varchar(70),
+			cpf varchar(13),
+			rg  varchar(13),
+			telf varchar(15),
+			email varchar(60));
+
+create table prof (matr serial primary key not null
+                        nome varchar(70),
+			senha varchar(15),
+			cargh varchar(15),
+			disp varchar(20),
+			idade integer,
+			ender varchar(100),
+			cidade varchar(20),
+			nomPai varchar(70),
+			nomMae varchar(70),
+			cpf varchar(13),
+			rg  varchar(13),
+			telf varchar(15),
+			email varchar(60));
+			
+create table serv (matr serial primary key not null,
+                    nome varchar(70),
+			senha varchar(15),
+			cargh varchar(15),
+			idade integer,
+			area varchar(45),
+			ender varchar(100),
+			cidade varchar(20),
+			nomPai varchar(70),
+			nomMae varchar(70),
+			cpf varchar(13),
+			rg  varchar(13),
+			telf varchar(15),
+			email varchar(60));
+			
+insert into aluno()
+values ('rafael augusto', 'ra123456', 23, 'rua joaquim das tantas', 'objetopolis ', 'Joaquim', 'Maria ', ' 999.888.777-34', '233.332.233', '(84)9911-1111', 'rafael@hotmail.com');
+
+
+insert into prof()
+values ('DaitimDaitom', 'dai43212', '20 - horas', 'matematica', 42, 'rua das quebrada, MaJonir', 'Marte',  'Mario', 'Princesa Do Mario', '123.123.123.12', '234.432.123', '(11) 2131-2133', 'daitim@outlook.com');
+
+
+insert into serv()
+values ('Ferverone', 'ferv123', '15 - horas', 34, 'biblioteca', 'rua das esmeraldas', 'Arere', 'claudio', 'dilma', '982.123.322-23', '232.424.123','(23) 2133.1231',  'ferverone@hotmail.com'); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						
