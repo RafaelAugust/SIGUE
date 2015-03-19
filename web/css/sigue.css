@@ -8,5 +8,23 @@ and open the template in the editor.
     Author     : 20131064110155
 */
 
+#Centro{
+    position: relative;
+    top: 100px;
+}
+
+.excluir{
+    background: red;
+    color: black;
+    padding: 50px;
+    text-align: center;
+}
+
+.ListAluno{position: relative;
+           top: 80px; 
+            }
+
 #logon{position:absolute;
-       left: 700px;}
+       left: 0px;}
+
+

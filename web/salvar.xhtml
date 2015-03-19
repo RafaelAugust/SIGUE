@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        
+        <h:form styleClass="pesquisa">
+                <h:panelGrid id="painelLogar" columns="5">
+                    <p:outputLabel value="Nome " />
+                    <p:inputText id="login" value="#{userControler.alunoB.nome}"
+                                 required="true" requiredMessage="Campo Login"/>
+
+                    <p:outputLabel value="Sobrenome" />
+                    <p:inputText id="sobr" value="#{userControler.alunoB.sobrenome}"
+                                   required="true" requiredMessage="Campo sobrenome"/>
+
+                    <p:commandLink update="painelLogar" action="#{userControler.setAlunoB(alunoB)}">
+                        <p:graphicImage value="imagens/pesquisar.jpeg" width="55" height="35" />                 
+                    </p:commandLink>
+                    
+                </h:panelGrid>
+            </h:form>
+        Hello from Facelets
+    </h:body>
+</html>
+

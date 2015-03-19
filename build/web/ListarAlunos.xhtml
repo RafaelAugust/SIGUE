@@ -1,11 +1,51 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
-   <ui:decorate template="index.xhtml" >
-        <ui:define name="centro">
-            
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <ui:decorate template="index.xhtml" >
+
+        <ui:define name="centro" >
+            <center>
+                <p:fieldset legend="aluno" toggleable="true">
+                    <h:form>
+                        <p:dataTable  var="lista" value="#">
+                            <p:column headerText="ID" >
+                                <p:outputLabel value="#{userControler.alunoB.idSequencia}" />
+                            </p:column>
+                            <p:column headerText="Nome">
+                                <p:outputLabel value="#{userControler.alunoB.nome}" />
+                            </p:column>
+                            <p:column headerText="Sobrenome">
+                                <p:outputLabel value="#{userControler.alunoB.sobrenome}" />
+                            </p:column>
+                            <p:column headerText="Data">
+                                <p:outputLabel value="#{userControler.alunoB.datnasc}" />
+                            </p:column>
+                            <p:column headerText="CEP">
+                                <p:outputLabel value="#{userControler.alunoB.cep}" />
+                            </p:column>
+                            <p:column headerText="celular">
+                                <p:outputLabel value="#{userControler.alunoB.fone}" />
+                            </p:column>
+                           
+                            <p:column headerText="*" width="40">
+                                <p:commandLink action="EditarAluno" actionListener="#{userControler.selecionarContato()}">
+                                    <p:graphicImage value="imagens/edit.jpeg" width="25" height="25" />
+                                </p:commandLink>
+                            </p:column>
+                            
+                            <p:column headerText="*" width="40">
+                                <p:commandLink action="Excluir" actionListener="#{userControler.selecionarContato()}" >
+                                    <p:graphicImage  value="imagens/excluir.jpeg" width="25" height="25" />
+                                </p:commandLink>
+                            </p:column>
+                        </p:dataTable>
+                    </h:form>
+                </p:fieldset>
+            </center>
         </ui:define>
     </ui:decorate> 
 </html>

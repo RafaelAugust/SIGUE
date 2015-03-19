@@ -16,9 +16,9 @@ import java.util.logging.Logger;
  */
 public class Conexao {
     private final String Drive = "org.postgresql.Driver";
-    private  final String url = "jdbc:postgresql://localhost:5432/primeiroJSF";
-    private final String login ="Rafael";
-    private final String senha = "20131064110155";
+    private  final String url = "jdbc:postgresql://localhost:5432/siguedb";
+    private final String login ="user_rafael";
+    private final String senha = "123456";
     private Connection con;
     
     public  Conexao(){

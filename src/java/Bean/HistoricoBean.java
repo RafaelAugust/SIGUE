@@ -5,10 +5,15 @@
  */
 package Bean;
 
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
 /**
  *
  * @author Familia
  */
+@ManagedBean
+@SessionScoped
 public class HistoricoBean {
    private int codhistorico;
    private String notaport;

@@ -2,11 +2,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:p="http://primefaces.org/ui"
-      xmlns:f="http://java.sun.com/jsf/core">
-
-    <ui:decorate template="index.xhtml" >
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+   <ui:decorate template="index.xhtml" >
         <ui:define name="centro">
             <center>
                 <h:form>
@@ -81,7 +81,7 @@
                         <p:inputMask id="cep" value="#{userControler.alunoB.cep}"
                                      mask="99999-999"  required="true" requiredMessage="Campo Obrigatorio"/>
                         <p:message for="cep"/>
-
+                        
                         <p:outputLabel value="UF :"/>
                         <p:selectOneMenu id="uf" value="#{userControler.alunoB.uf}">
                             <f:selectItem itemLabel="MG"  itemValue="MG"/>
@@ -92,15 +92,11 @@
                             <f:selectItem itemLabel="RN" itemValue="RN" />
                         </p:selectOneMenu>
                         <p:message for="uf" />
-
                     </h:panelGrid>    
-                    <p:separator style="width: 100%; height: 1px"/> 
-                    <p:commandButton value="ENVIAR" update="painel01" action="#{userControler.cadastrarAluno()}" />
-                    <p:commandButton value="LIMPAR" type="reset" />    
-
+                    <p:separator style="width: 100%; height: 1px"/>
+                    <p:commandButton value="Salvar" update="painel01" action="#{userControler.editarAluno()}" /> 
                 </h:form>
             </center>
-
         </ui:define>
     </ui:decorate> 
 </html>

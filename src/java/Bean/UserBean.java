@@ -11,11 +11,19 @@ import javax.faces.bean.SessionScoped;
 
 /**
  *
- * @author Familia
+ * @author Rafael, Eloise, Felipe
  */
+
 @ManagedBean
 @SessionScoped
-public class UserBean implements Serializable{
+public class UserBean implements Serializable{   
+   
+    //AdmBean
+    private int codadm;
+    private String logon;
+    private String senha;
+    
+    //AlunoBean 
     private int codmatricula;
     private int idSequencia;
     private String nome;
@@ -25,7 +33,104 @@ public class UserBean implements Serializable{
     private String sexo;
     private String mae;
     private String pai;
+    private String fone;
+    private String fonefixo;
+    private String cidade;
+    private String rua;
+    private String bairro;
+    private String n;
+    private String uf;
+    private String cep;
+   
+    public String getCep() {
+        return cep;
+    }
 
+    public void setCep(String cep) {
+        this.cep = cep;
+    }
+   
+    public String getFone() {
+        return fone;
+    }
+
+    public void setFone(String fone) {
+        this.fone = fone;
+    }
+
+    public String getFonefixo() {
+        return fonefixo;
+    }
+
+    public void setFonefixo(String fonefixo) {
+        this.fonefixo = fonefixo;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
+    public String getRua() {
+        return rua;
+    }
+
+    public void setRua(String rua) {
+        this.rua = rua;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
+    }
+
+    public String getN() {
+        return n;
+    }
+
+    public void setN(String n) {
+        this.n = n;
+    }
+
+    public String getUf() {
+        return uf;
+    }
+
+    public void setUf(String uf) {
+        this.uf = uf;
+    }
+    
+    
+    public int getCodadm() {
+        return codadm;
+    }
+
+    public void setCodadm(int codadm) {
+        this.codadm = codadm;
+    }
+
+    public String getLogon() {
+        return logon;
+    }
+
+    public void setLogon(String logon) {
+        this.logon = logon;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+    
     public int getIdSequencia() {
         return idSequencia;
     }
@@ -34,7 +139,15 @@ public class UserBean implements Serializable{
         this.idSequencia = idSequencia;
     }
 
-    public int getCodmatricula() {
+    public int getCodmatricula(){
+        int codmatricula = 0;
+        int test = 0;
+        
+        if(test >= codmatricula){
+                this.codmatricula = Integer.parseInt(datnasc) + Integer.parseInt(n) + test;
+                test++;
+                return this.codmatricula;
+            }
         return codmatricula;
     }
 
@@ -97,6 +210,5 @@ public class UserBean implements Serializable{
     public void setPai(String pai) {
         this.pai = pai;
     }
-    
     
 }

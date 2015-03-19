@@ -38,18 +38,38 @@
                 <p:layoutUnit styleClass="Stilo_Centros" position="center">
                     <ui:insert name="centro">
                         <div id="header">
-                               Head
+                            <ui:include src="saudacao-sair.xhtml" /> 
                         </div>
                         
                         <div id="Centro">
-                               Centro da pagina
+                            <p:outputLabel value="Nome : Rafael Augusto" />
+                            <br />
+                            <br />
+                            <p:outputLabel value="Idade : 20" />
+                            <br />
+                            <br />
+                            <p:outputLabel value="data : 17/12/1994" />
+                            <br />
+                            <br />
+                            <p:outputLabel value="Telefone(celular) : +55(84)9422..." />
+                            <br />
+                            <br />
+                            <p:commandLink> 
+                                 <p:graphicImage value="imagens/edit.jpeg" height="30" width="30"/>
+                            </p:commandLink>
+                            <p:graphicImage value="imagens/excluir.jpeg" height="30" width="30"/>
+                          
                         </div>
                         
                         <div id="rodape">
-                                rodape
+                            <ui:include src="rodapeSIGUE.xhtml" />
                         </div>
                     </ui:insert>
                 </p:layoutUnit>
+                
+                <p:layoutUnit position="north" size="80">
+                       <ui:include src="logoSIGUE.xhtml" />
+                </p:layoutUnit> 
             </p:layout>
            </f:view>
         </h:body>
